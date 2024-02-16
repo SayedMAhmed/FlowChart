@@ -1,0 +1,36 @@
+Python functionalities:
+
+* Retrieve data from a csv file as a dictionary:
+
+import csv				# read and write csv files
+from pprint import pprint		# pretty print
+
+with open('file-path', 'r') as f_in:
+
+	dict_reader = csv.DictReader(f_in)
+	first_entry = next(dict_reader)
+
+	
+	pprint(first_entry)
+
+* Parse dates
+
+from datetime import datetime		# parse dates
+
+datetime_object = datetime.strptime('string formatted date', "datetime tags accordingly")
+
+# converts a string formatted date into a datetime object
+
+# tags: %a -> Sun,Mon,.. ,%A -> Sunday,Monday,.. ,%d -> 01,02,.. ,%-d -> 1,2,..
+# %b -> Jan,Feb,.. ,%B -> January,February,.. ,%m -> 01,02,.. ,%-m -> 1,2,..
+# %y -> 00,01,.. ,%-y -> 0,1,.., %Y -> 2013,2019,.. ,for more search google.
+
+datetime_object.strftime("datetime tags in whichever order you like")
+
+# converts a datetime object into a string in your likened format
+
+str_var = int_var.astype(str)
+
+var.dtype
+
+image_predictions_clean.p1 = image_predictions_clean.p1.str.lower()
